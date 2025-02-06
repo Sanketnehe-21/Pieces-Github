@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Steps - Your First GitHub Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Advanced Steps for Your GitHub Project</h1>
+    </header>
+
+    <main>
+        <section class="steps">
+            <h2>Enhance Your Project</h2>
+            <ol>
+                <li>
+                    <h3><input type="checkbox" id="step8" onclick="checkCheckboxes()"> Manage Branches</h3>
+                    <p>Learn to create and switch branches in Git to manage different versions of your project:</p>
+                    <code>git branch [branch-name]</code>
+                    <p>To switch to this branch:</p>
+                    <code>git checkout [branch-name]</code>
+                </li>
+                <li>
+                    <h3><input type="checkbox" id="step9" onclick="checkCheckboxes()"> Understand Pull Requests</h3>
+                    <p>Create a pull request on GitHub to propose and collaborate on changes to a repository. These changes are proposed in a branch, which ensures the master branch only contains finished and approved work.</p>
+                </li>
+                <li>
+                    <h3><input type="checkbox" id="step10" onclick="checkCheckboxes()"> Merge Changes</h3>
+                    <p>After a pull request is approved, you merge it into the master branch, which makes the changes official. Execute the merge with:</p>
+                    <code>git merge [branch-name]</code>
+                </li>
+                <li>
+                    <h3><input type="checkbox" id="step11" onclick="checkCheckboxes()"> Fetch and Pull from GitHub</h3>
+                    <p>To update your local repository to the newest commit, execute the fetch and pull commands:</p>
+                    <code>git fetch origin</code>
+                    <code>git pull</code>
+                </li>
+            </ol>
+        </section>
+        <button id="nextButton" onclick="window.location.href='index4.html';" disabled>Go to Next Page</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 [Your Name or Company]</p>
+    </footer>
+
+    <script>
+        function checkCheckboxes() {
+            // Get all checkboxes
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            
+            // Check if all checkboxes are checked
+            const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+            
+            // Enable the button if all checkboxes are checked
+            document.getElementById('nextButton').disabled = !allChecked;
+        }
+    </script>
+</body>
+</html>

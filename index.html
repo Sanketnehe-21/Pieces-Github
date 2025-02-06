@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your First GitHub Project</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -14,79 +14,44 @@
     <main>
         <section class="introduction">
             <h2>Welcome!</h2>
-            <p>
-                Ready to take your first steps into the world of version control and code sharing? This guide will walk you through the process of creating a simple project and uploading it to GitHub. 
-            </p>
-            <p>
-                Don't worry, we'll take it one step at a time! 
-            </p>
+            <p>Ready to take your first steps into the world of version control and code sharing? This guide will walk you through the process of creating a simple project and uploading it to GitHub.</p>
+            <p>Don't worry, we'll take it one step at a time!</p>
         </section>
 
-        <section class="steps">
+        <section class="steps" id="initialSteps">
             <h2>Let's Get Started</h2>
             <ol>
                 <li>
-                    <h3><input type="checkbox" id="step1"> Download and Install Git</h3>
+                    <h3><input type="checkbox" id="step1" onclick="checkCheckboxes()"> Download and Install Git</h3>
                     <p>First things first, you'll need Git installed on your computer. Head over to the <a href="https://git-scm.com/downloads" target="_blank">official Git website</a> and download the version for your operating system.</p>
                     <p>Once downloaded, run the installer and follow the on-screen instructions. You'll be up and running with Git in no time!</p>
                 </li>
                 <li>
-                    <h3><input type="checkbox" id="step2"> Create a GitHub Account</h3>
+                    <h3><input type="checkbox" id="step2" onclick="checkCheckboxes()"> Create a GitHub Account</h3>
                     <p>GitHub is where the magic of code sharing happens! If you don't already have an account, visit <a href="https://github.com/" target="_blank">GitHub</a> and sign up for a free account.</p>
                 </li>
-                <li>
-                    <h3><input type="checkbox" id="step3"> Set Up Your Local Project</h3>
-                    <p>Create a new folder on your computer where you'll keep your project files. Give it a descriptive name, like "my-first-github-project".</p>
-                    <p>Inside the folder, create three files:</p>
-                    <ul>
-                        <li><code>index.html</code> (for your website's content)</li>
-                        <li><code>style.css</code> (for styling the look of your website)</li>
-                        <li><code>script.js</code> (for adding interactivity to your website)</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3><input type="checkbox" id="step4"> Basic HTML Structure </h3>
-                    <p>Open <code>index.html</code> in your code editor and paste in the following basic HTML structure:</p>
-                    <code>
-                        &lt;!DOCTYPE html&gt;<br/>
-                        &lt;html lang="en"&gt;<br/>
-                        &lt;head&gt;<br/>
-                        &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br/>
-                        &nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br/>
-                        &nbsp;&nbsp;&lt;title&gt;My First Website&lt;/title&gt;<br/>
-                        &nbsp;&nbsp;&lt;link rel="stylesheet" href="style.css"&gt;<br/>
-                        &lt;/head&gt;<br/>
-                        &lt;body&gt;<br/>
-                        &nbsp;&nbsp;&lt;script src="script.js"&gt;&lt;/script&gt;<br/>
-                        &lt;/body&gt;<br/>
-                        &lt;/html&gt; 
-                    </code>
-                </li>
-                <li>
-                    <h3><input type="checkbox" id="step5"> Add Some CSS Styling </h3>
-                    <p>Open <code>style.css</code> and let's add a bit of color:</p>
-                    <code>
-                        body {<br/>
-                        &nbsp;&nbsp;background-color: lightblue;<br/> 
-                        }
-                    </code>
-                </li>
-                <li>
-                    <h3><input type="checkbox" id="step6"> A Touch of JavaScript </h3>
-                    <p>Finally, open <code>script.js</code> and add a simple console message:</p>
-                    <code>
-                        console.log("Hello, GitHub!"); 
-                    </code>
-                </li> 
-                
             </ol>
         </section>
+        
+        <!-- Button to navigate to index2.html, initially disabled -->
+        <button id="nextButton" onclick="window.location.href='index2.html';" disabled>Go to Next Page</button>
     </main>
 
     <footer>
-        <p>&copy; 2025 [Sanket Nehe & Pieces-os]</p>
+        <p>&copy; 2025 [Your Name or Company]</p>
     </footer>
+<script>
+    function checkCheckboxes() {
+    // Get all checkboxes
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    
+    // Check if all checkboxes are checked
+    const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+    
+    // Enable the button if all checkboxes are checked
+    document.getElementById('nextButton').disabled = !allChecked;
+}
 
-    <script src="script.js"></script>
+</script>
 </body>
 </html>

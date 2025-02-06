@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Steps - Your First GitHub Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Next Steps for Your GitHub Project</h1>
+    </header>
+
+    <main>
+        <section class="steps">
+            <h2>Continue Your Journey</h2>
+            <ol>
+                <li>
+                    <h3><input type="checkbox" id="step3" onclick="checkCheckboxes()"> Set Up Your Local Project</h3>
+                    <p>Create a new folder on your computer where you'll keep your project files. Give it a descriptive name, like "my-first-github-project".</p>
+                    <p>Inside the folder, create three files: <code>index.html</code>, <code>style.css</code>, and <code>script.js</code>.</p>
+                </li>
+                <li>
+                    <h3><input type="checkbox" id="step4" onclick="checkCheckboxes()"> Initialize Git Repository</h3>
+                    <p>Open your terminal or command prompt. Navigate to your project directory and run the following command:</p>
+                    <code>git init</code>
+                    <p>This initializes a new Git repository in your project folder.</p>
+                </li>
+                <li>
+                    <h3><input type="checkbox" id="step5" onclick="checkCheckboxes()"> Commit Your Changes</h3>
+                    <p>Add your files to the staging area with:</p>
+                    <code>git add .</code>
+                    <p>Then commit your changes:</p>
+                    <code>git commit -m "Initial commit"</code>
+                </li>
+                <li>
+                    <h3><input type="checkbox" id="step6" onclick="checkCheckboxes()"> Connect to GitHub</h3>
+                    <p>Create a new repository on GitHub. Then, link your local repository to GitHub with:</p>
+                    <code>git remote add origin [Your-Repository-URL]</code>
+                </li>
+                <li>
+                    <h3><input type="checkbox" id="step7" onclick="checkCheckboxes()"> Push to GitHub</h3>
+                    <p>Push your commits to GitHub:</p>
+                    <code>git push -u origin main</code>
+                    <p>This will upload your project to GitHub, allowing you to share it with others.</p>
+                </li>
+            </ol>
+        </section>
+        <!-- Button to navigate to index3.html, initially disabled -->
+        <button id="nextButton" onclick="window.location.href='index3.html';" disabled>Go to Next Page</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 [Your Name or Company]</p>
+    </footer>
+
+    <script>
+        function checkCheckboxes() {
+            // Get all checkboxes
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            
+            // Check if all checkboxes are checked
+            const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+            
+            // Enable the button if all checkboxes are checked
+            document.getElementById('nextButton').disabled = !allChecked;
+        }
+    </script>
+</body>
+</html>
