@@ -86,3 +86,46 @@ textarea {
     white-space: pre-wrap;
     font-family: monospace;
 }
+:root {
+    --background-color: #fff;
+    --text-color: #333;
+    --header-bg-color: #007bff;
+    --header-text-color: white;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+}
+
+.dark-mode {
+    --background-color: #333;
+    --text-color: #ccc;
+    --header-bg-color: #222;
+    --header-text-color: #ddd;
+}
