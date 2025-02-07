@@ -1,3 +1,5 @@
+#JUST FOR FUN FOLKS ...
+
 **making website for newbies using pieces-os only**
 what is **Pieces Os?**
 
